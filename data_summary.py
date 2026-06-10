@@ -20,4 +20,12 @@ exyr = ossdat[2].value_counts()
 
 plt.title('統計解析業務に携わった経験年数を以下からご選択ください。')
 
+plt.pie(
+    exyr, 
+    labels=exyr.index, 
+    autopct=lambda p: f'{p:.1f}% ({p * sum(exyr) / 100:.0f})',
+    startangle=90
+)
+
+st.pyplot(plt)
 
