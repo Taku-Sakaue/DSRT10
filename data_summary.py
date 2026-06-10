@@ -3,6 +3,19 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
+
+# フォント登録
+_font_path = pathlib.Path(__file__).parent.parent / "fonts" / "NotoSansJP-Regular.ttf"
+if _font_path.exists():
+    font_manager.fontManager.addfont(str(_font_path))
+    matplotlib.rcParams["font.family"] = (
+        font_manager.FontProperties(fname=str(_font_path)).get_name()
+    )
+matplotlib.rcParams["axes.unicode_minus"] = False
+
+
+
 
 
 st.title('参加者要約')
