@@ -2,4 +2,4 @@ openpyxl
 streamlit
 pandas
 matplotlib
-japanize_matplotlib
+matplotlib-fontja
