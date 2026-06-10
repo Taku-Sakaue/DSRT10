@@ -26,4 +26,3 @@ plt.pie(
     startangle=90
 )
 
-st.pyplot(plt)
