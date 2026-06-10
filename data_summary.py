@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 # フォント登録
-font_path = os.path.join(os.path.dirname(__file__), "fonts", "NotoSansJP-Regular.ttf")
+font_path = os.path.join(os.path.dirname(__file__), "fonts", "ZenKakuGothicNew-Regular.ttf")
 
 # フォントプロパティを作成
 font_prop = font_manager.FontProperties(fname=font_path)
