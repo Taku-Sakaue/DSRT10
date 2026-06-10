@@ -1,19 +1,17 @@
+import os
 import openpyxl
 import pathlib
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 # フォント登録
-
-
-_font_path = pathlib.Path(__file__).parent.parent / "fonts" / "NotoSansJP-Regular.ttf"
+font_path = os.path.join(os.path.dirname(__file__), "fonts", "NotoSansJP-Regular.ttf")
 
 # フォントプロパティを作成
-font_prop = font_manager.FontProperties(fname=_font_path)
+font_prop = font_manager.FontProperties(fname=font_path)
 
 # matplotlib にフォントを登録・適用
 plt.rcParams['font.family'] = font_prop.get_name()
