@@ -3,7 +3,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib-fontja
+
+pip install japanize-matplotlib
 
 st.title('参加者要約')
 
