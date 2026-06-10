@@ -8,14 +8,15 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
 # フォント登録
-_font_path = pathlib.Path(__file__).parent.parent / "fonts" / "NotoSansJP-Regular.ttf"
-if _font_path.exists():
-    font_manager.fontManager.addfont(str(_font_path))
-    matplotlib.rcParams["font.family"] = (
-        font_manager.FontProperties(fname=str(_font_path)).get_name()
-    )
-matplotlib.rcParams["axes.unicode_minus"] = False
 
+
+_font_path = pathlib.Path(__file__).parent.parent / "fonts" / "NotoSansJP-Regular.ttf"
+
+# フォントプロパティを作成
+font_prop = font_manager.FontProperties(fname=_font_path)
+
+# matplotlib にフォントを登録・適用
+plt.rcParams['font.family'] = font_prop.get_name()
 
 
 
