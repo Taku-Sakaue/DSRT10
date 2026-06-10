@@ -15,14 +15,8 @@ ossdat = indat[indat[3] == "製薬業界におけるR活用の可能性と課題
 
 # 経験年数
 # 各水準の件数
-exyr = ossdat[4].value_counts()
+exyr = ossdat[2].value_counts()
 
 plt.title('統計解析業務に携わった経験年数を以下からご選択ください。')
 
-plt.pie(
-    exyr, 
-    labels=exyr.index, 
-    autopct=lambda p: f'{p:.1f}% ({p * sum(exyr) / 100:.0f})',
-    startangle=90
-)
 
